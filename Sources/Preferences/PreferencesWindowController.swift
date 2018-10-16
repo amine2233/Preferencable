@@ -22,10 +22,10 @@ public final class PreferencesWindowController: NSWindowController {
 			backing: .buffered,
 			defer: true
 		)
+        window.title = String(System.localizedString(forKey: "Preferences…").dropLast())
+        window.contentView = tabViewController.view
+        
 		super.init(window: window)
-
-		window.title = String(System.localizedString(forKey: "Preferences…").dropLast())
-		window.contentView = tabViewController.view
 
 		tabViewController.tabViewItems = self.controllers.map { viewController in
 			let item = NSTabViewItem(identifier: viewController.toolbarItemTitle)
@@ -34,25 +34,32 @@ public final class PreferencesWindowController: NSWindowController {
 			item.viewController = viewController as? NSViewController
 			return item
 		}
-		tabViewController.tabStyle = .toolbar
-		tabViewController.transitionOptions = [.crossfade, .slideDown]
+        
+        configure()
 	}
 
 	public required init?(coder: NSCoder) {
         self.controllers = []
 		super.init(coder: coder)
-	}
-
-	public func showWindow() {
-		if !window!.isVisible {
-			window?.center()
-		}
         
+        configure()
+	}
+    
+    private func configure() {
+        tabViewController.tabStyle = .toolbar
+        tabViewController.transitionOptions = [.crossfade, .slideDown]
+    }
+
+    public override func showWindow(_ sender: Any?) {
         if (!self.controllers.isEmpty) {
-            window?.contentRect(forFrameRect: (self.controllers[0] as! NSViewController).view.bounds)
+            window?.setFrame((self.controllers[0] as! NSViewController).view.bounds, display: true)
         }
         
-		showWindow(self)
+        if !window!.isVisible {
+            window?.center()
+        }
+        
+		super.showWindow(sender)
 		NSApp.activate(ignoringOtherApps: true)
 	}
 
