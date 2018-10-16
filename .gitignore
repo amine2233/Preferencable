@@ -1,0 +1,12 @@
+/.build
+/Packages
+xcuserdata
+project.xcworkspace
+
+.DS_Store
+
+## CocoaPods
+Pods/
+
+## Carthage
+Carthage/Build
