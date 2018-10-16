@@ -66,7 +66,7 @@ public final class PreferencesWindowController: NSWindowController {
         item.label = viewController.toolbarItemTitle
         item.image = viewController.toolbarItemIcon
         item.viewController = viewController as? NSViewController
-        tabViewController.tabViewItems.insert(item, at: at)
+        tabViewController.insertTabViewItem(item, at: at)
     }
     
     public func append(viewController: Preferenceable) {
@@ -75,12 +75,12 @@ public final class PreferencesWindowController: NSWindowController {
         item.label = viewController.toolbarItemTitle
         item.image = viewController.toolbarItemIcon
         item.viewController = viewController as? NSViewController
-        tabViewController.tabViewItems.append(item)
+        tabViewController.insertTabViewItem(item, at: tabViewController.tabViewItems.count)
     }
     
     public func remove(viewController: Preferenceable) {
-        self.tabViewController.tabViewItems = self.tabViewController.tabViewItems.filter { $0 !== viewController }
-        self.controllers = self.controllers.filter { $0 !== viewController }
+        //self.tabViewController.remove
+        //self.controllers = self.controllers.filter { $0 !== viewController }
     }
 }
 

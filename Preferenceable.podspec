@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = 'Preferenceable'
-	s.version = '0.2.1'
+	s.version = '0.2.2'
 	s.summary = 'Add a preferences window to your macOS app in minutes'
 	s.license = 'MIT'
 	s.homepage = 'https://github.com/amine2233/Preferencable'
