@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6711B14F21758B9500DAE1BC"
-               BuildableName = "Preferencable_macOS.framework"
-               BlueprintName = "Preferencable macOS"
-               ReferencedContainer = "container:Preferencable.xcodeproj">
+               BuildableName = "Preferenceable.framework"
+               BlueprintName = "Preferenceable macOS"
+               ReferencedContainer = "container:Preferenceable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6711B15821758B9500DAE1BC"
-               BuildableName = "Preferencable macOSTests.xctest"
-               BlueprintName = "Preferencable macOSTests"
-               ReferencedContainer = "container:Preferencable.xcodeproj">
+               BuildableName = "PreferenceableTests.xctest"
+               BlueprintName = "Preferenceable macOSTests"
+               ReferencedContainer = "container:Preferenceable.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6711B14F21758B9500DAE1BC"
-            BuildableName = "Preferencable_macOS.framework"
-            BlueprintName = "Preferencable macOS"
-            ReferencedContainer = "container:Preferencable.xcodeproj">
+            BuildableName = "Preferenceable.framework"
+            BlueprintName = "Preferenceable macOS"
+            ReferencedContainer = "container:Preferenceable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6711B14F21758B9500DAE1BC"
-            BuildableName = "Preferencable_macOS.framework"
-            BlueprintName = "Preferencable macOS"
-            ReferencedContainer = "container:Preferencable.xcodeproj">
+            BuildableName = "Preferenceable.framework"
+            BlueprintName = "Preferenceable macOS"
+            ReferencedContainer = "container:Preferenceable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6711B14F21758B9500DAE1BC"
-            BuildableName = "Preferencable_macOS.framework"
-            BlueprintName = "Preferencable macOS"
-            ReferencedContainer = "container:Preferencable.xcodeproj">
+            BuildableName = "Preferenceable.framework"
+            BlueprintName = "Preferenceable macOS"
+            ReferencedContainer = "container:Preferenceable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

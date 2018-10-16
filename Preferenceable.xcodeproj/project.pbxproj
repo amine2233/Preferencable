@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6711B15A21758B9500DAE1BC /* Preferencable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6711B15021758B9500DAE1BC /* Preferencable.framework */; };
+		6711B15A21758B9500DAE1BC /* Preferenceable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6711B15021758B9500DAE1BC /* Preferenceable.framework */; };
 		6711B15F21758B9500DAE1BC /* Preferencable_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711B15E21758B9500DAE1BC /* Preferencable_Tests.swift */; };
 		6711B16121758B9500DAE1BC /* Preferencable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6711B15321758B9500DAE1BC /* Preferencable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6711B16F21758DE000DAE1BC /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711B16B21758DE000DAE1BC /* PreferencesWindowController.swift */; };
@@ -27,10 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6711B15021758B9500DAE1BC /* Preferencable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preferencable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6711B15021758B9500DAE1BC /* Preferenceable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preferenceable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6711B15321758B9500DAE1BC /* Preferencable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preferencable.h; sourceTree = "<group>"; };
 		6711B15421758B9500DAE1BC /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
-		6711B15921758B9500DAE1BC /* PreferencableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreferencableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6711B15921758B9500DAE1BC /* PreferenceableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreferenceableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6711B15E21758B9500DAE1BC /* Preferencable_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferencable_Tests.swift; sourceTree = "<group>"; };
 		6711B16021758B9500DAE1BC /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		6711B16821758DB300DAE1BC /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = "../../../Downloads/Preferences-master/Package.swift"; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6711B15A21758B9500DAE1BC /* Preferencable.framework in Frameworks */,
+				6711B15A21758B9500DAE1BC /* Preferenceable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +72,8 @@
 		6711B15121758B9500DAE1BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6711B15021758B9500DAE1BC /* Preferencable.framework */,
-				6711B15921758B9500DAE1BC /* PreferencableTests.xctest */,
+				6711B15021758B9500DAE1BC /* Preferenceable.framework */,
+				6711B15921758B9500DAE1BC /* PreferenceableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6711B14F21758B9500DAE1BC /* Preferencable macOS */ = {
+		6711B14F21758B9500DAE1BC /* Preferenceable macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6711B16221758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferencable macOS" */;
+			buildConfigurationList = 6711B16221758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferenceable macOS" */;
 			buildPhases = (
 				6711B14B21758B9500DAE1BC /* Headers */,
 				6711B14C21758B9500DAE1BC /* Sources */,
@@ -135,14 +135,14 @@
 			);
 			dependencies = (
 			);
-			name = "Preferencable macOS";
+			name = "Preferenceable macOS";
 			productName = "Preferencable macOS";
-			productReference = 6711B15021758B9500DAE1BC /* Preferencable.framework */;
+			productReference = 6711B15021758B9500DAE1BC /* Preferenceable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6711B15821758B9500DAE1BC /* Preferencable macOSTests */ = {
+		6711B15821758B9500DAE1BC /* Preferenceable macOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6711B16521758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferencable macOSTests" */;
+			buildConfigurationList = 6711B16521758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferenceable macOSTests" */;
 			buildPhases = (
 				6711B15521758B9500DAE1BC /* Sources */,
 				6711B15621758B9500DAE1BC /* Frameworks */,
@@ -153,9 +153,9 @@
 			dependencies = (
 				6711B15C21758B9500DAE1BC /* PBXTargetDependency */,
 			);
-			name = "Preferencable macOSTests";
+			name = "Preferenceable macOSTests";
 			productName = "Preferencable macOSTests";
-			productReference = 6711B15921758B9500DAE1BC /* PreferencableTests.xctest */;
+			productReference = 6711B15921758B9500DAE1BC /* PreferenceableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6711B14821758B7A00DAE1BC /* Build configuration list for PBXProject "Preferencable" */;
+			buildConfigurationList = 6711B14821758B7A00DAE1BC /* Build configuration list for PBXProject "Preferenceable" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,8 +188,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6711B14F21758B9500DAE1BC /* Preferencable macOS */,
-				6711B15821758B9500DAE1BC /* Preferencable macOSTests */,
+				6711B14F21758B9500DAE1BC /* Preferenceable macOS */,
+				6711B15821758B9500DAE1BC /* Preferenceable macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,7 +236,7 @@
 /* Begin PBXTargetDependency section */
 		6711B15C21758B9500DAE1BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6711B14F21758B9500DAE1BC /* Preferencable macOS */;
+			target = 6711B14F21758B9500DAE1BC /* Preferenceable macOS */;
 			targetProxy = 6711B15B21758B9500DAE1BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -323,11 +323,12 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intechconsulting.$(PROJECT_NAME)";
+				PRODUCT_NAME = Preferenceable;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -400,10 +401,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intechconsulting.$(PROJECT_NAME)";
+				PRODUCT_NAME = Preferenceable;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -480,7 +482,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intechconsulting.$(PROJECT_NAME)Tests";
-				PRODUCT_NAME = "$(PROJECT_NAME)Tests";
+				PRODUCT_NAME = PreferenceableTests;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -546,7 +548,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intechconsulting.$(PROJECT_NAME)Tests";
-				PRODUCT_NAME = "$(PROJECT_NAME)Tests";
+				PRODUCT_NAME = PreferenceableTests;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -557,7 +559,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6711B14821758B7A00DAE1BC /* Build configuration list for PBXProject "Preferencable" */ = {
+		6711B14821758B7A00DAE1BC /* Build configuration list for PBXProject "Preferenceable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6711B14921758B7A00DAE1BC /* Debug */,
@@ -566,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6711B16221758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferencable macOS" */ = {
+		6711B16221758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferenceable macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6711B16321758B9500DAE1BC /* Debug */,
@@ -575,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6711B16521758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferencable macOSTests" */ = {
+		6711B16521758B9500DAE1BC /* Build configuration list for PBXNativeTarget "Preferenceable macOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6711B16621758B9500DAE1BC /* Debug */,
