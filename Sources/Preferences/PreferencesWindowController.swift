@@ -14,7 +14,7 @@ public final class PreferencesWindowController: NSWindowController {
         self.controllers = viewControllers
         
 		let window = NSWindow(
-			contentRect: (viewControllers[0] as! NSViewController).view.bounds,
+			contentRect: .zero,
 			styleMask: [
 				.titled,
 				.closable
@@ -47,7 +47,11 @@ public final class PreferencesWindowController: NSWindowController {
 		if !window!.isVisible {
 			window?.center()
 		}
-
+        
+        if (!self.controllers.isEmpty) {
+            window?.contentRect(forFrameRect: (self.controllers[0] as! NSViewController).view.bounds)
+        }
+        
 		showWindow(self)
 		NSApp.activate(ignoringOtherApps: true)
 	}
