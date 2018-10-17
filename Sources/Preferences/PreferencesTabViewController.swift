@@ -5,6 +5,7 @@ import Foundation
 import Cocoa
 
 final class PreferencesTabViewController: NSTabViewController {
+    
 	private var tabViewSizes = [String: CGSize]()
 
 	private func setWindowFrame(for viewController: NSViewController) {

@@ -5,58 +5,52 @@ import Foundation
 import Cocoa
 
 public final class PreferencesWindowController: NSWindowController {
-	private let tabViewController = PreferencesTabViewController()
     
-    var controllers: [Preferenceable]
+    var tabViewController = PreferencesTabViewController()
 
-	public init(viewControllers: [Preferenceable]) {
-		//precondition(!viewControllers.isEmpty, "You need to set at least one view controller")
-        self.controllers = viewControllers
+    public init(viewControllers: [Preferenceable]) {
+		precondition(!viewControllers.isEmpty, "You need to set at least one view controller")
         
-		let window = NSWindow(
-			contentRect: .zero,
-			styleMask: [
-				.titled,
-				.closable
-			],
-			backing: .buffered,
-			defer: true
-		)
-        window.title = String(System.localizedString(forKey: "Preferences…").dropLast())
-        window.contentView = tabViewController.view
+        let window = NSWindow(
+            contentRect: (viewControllers[0] as? NSViewController)?.view.bounds ?? .zero,
+            styleMask: [
+                .titled,
+                .miniaturizable,
+                .closable
+            ],
+            backing: .buffered,
+            defer: true
+        )
         
 		super.init(window: window)
 
-		tabViewController.tabViewItems = self.controllers.map { viewController in
-			let item = NSTabViewItem(identifier: viewController.toolbarItemTitle)
-			item.label = viewController.toolbarItemTitle
-			item.image = viewController.toolbarItemIcon
-			item.viewController = viewController as? NSViewController
-			return item
-		}
+        window.title = String(System.localizedString(forKey: "Preferences…").dropLast())
+        window.contentView = tabViewController.view
         
-        configure()
+        tabViewController.tabViewItems = viewControllers.map { viewController in
+            let item = NSTabViewItem(identifier: viewController.toolbarItemTitle)
+            item.label = viewController.toolbarItemTitle
+            item.image = viewController.toolbarItemIcon
+            item.viewController = viewController as? NSViewController
+            return item
+        }
+        
+        tabViewController.tabStyle = .toolbar
+        tabViewController.transitionOptions = [.crossfade, .slideDown]
 	}
 
 	public required init?(coder: NSCoder) {
-        self.controllers = []
 		super.init(coder: coder)
-        
-        configure()
 	}
-    
-    private func configure() {
-        tabViewController.tabStyle = .toolbar
-        tabViewController.transitionOptions = [.crossfade, .slideDown]
-    }
 
     public override func showWindow(_ sender: Any?) {
-        if (!self.controllers.isEmpty) {
-            window?.setFrame((self.controllers[0] as! NSViewController).view.bounds, display: true)
-        }
-        
-        if !window!.isVisible {
-            window?.center()
+        if let window = window, !window.isVisible {
+            if !self.tabViewController.tabViewItems.isEmpty {
+                if let rect = self.tabViewController.tabViewItems[0].viewController?.view.bounds {
+                    window.setFrame(rect, display: true, animate: true)
+                }
+            }
+            window.center()
         }
         
 		super.showWindow(sender)
@@ -67,27 +61,24 @@ public final class PreferencesWindowController: NSWindowController {
 		close()
 	}
     
-    public func insert(viewController: Preferenceable, at: Int) {
-        self.controllers.insert(viewController, at: at)
-        let item = NSTabViewItem(identifier: viewController.toolbarItemTitle)
-        item.label = viewController.toolbarItemTitle
-        item.image = viewController.toolbarItemIcon
-        item.viewController = viewController as? NSViewController
-        tabViewController.insertTabViewItem(item, at: at)
+    public func insert(viewController: Preferenceable, at index: Int) {
+        tabViewController.insertTabViewItem(self.tabViewItem(with: viewController), at: index)
     }
     
     public func append(viewController: Preferenceable) {
-        self.controllers.append(viewController)
+        tabViewController.addTabViewItem(self.tabViewItem(with: viewController))
+    }
+    
+    public func remove(viewController: Preferenceable) {
+        self.tabViewController.removeTabViewItem(self.tabViewItem(with: viewController))
+    }
+    
+    private func tabViewItem(with viewController: Preferenceable) -> NSTabViewItem {
         let item = NSTabViewItem(identifier: viewController.toolbarItemTitle)
         item.label = viewController.toolbarItemTitle
         item.image = viewController.toolbarItemIcon
         item.viewController = viewController as? NSViewController
-        tabViewController.insertTabViewItem(item, at: tabViewController.tabViewItems.count)
-    }
-    
-    public func remove(viewController: Preferenceable) {
-        //self.tabViewController.remove
-        //self.controllers = self.controllers.filter { $0 !== viewController }
+        return item
     }
 }
 
